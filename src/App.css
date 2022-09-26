@@ -1,38 +1,319 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li {
+  list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  color: #111;
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 100px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-top {
+  height: 25%;
+  background-color: #111;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 10px 10%;
+}
+.header-top ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.header-top li {
+  display: inline-block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-top li a {
+  font-size: 12px;
+  display: block;
+  color: #fff;
+  margin: 0 10px;
+  letter-spacing: 1px;
 }
+
+.header-bottom {
+  padding: 0 5%;
+  height: 75%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.header-bottom #logo img {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header-bottom nav {
+  position: relative;
+  bottom: 0;
+  margin-right: 0%;
+}
+.header-bottom nav li {
+  display: inline-block;
+}
+.header-bottom nav li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #000;
+}
+.header-bottom nav li:hover::after {
+  width: 100%;
+}
+.header-bottom nav li a {
+  display: block;
+  padding: 10px 5px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.quick li {
+  display: inline-block;
+}
+.quick li a {
+  display: block;
+  font-weight: 300;
+  padding: 5px 10px;
+}
+
+.util {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.util form {
+  width: 30%;
+  display: flex;
+  align-items: flex-start;
+}
+.util input {
+  padding: 2px;
+  padding-left: 20%;
+  width: 10vw;
+  height: 30px;
+  border: 0;
+  background-color: #eee;
+}
+.util input:focus {
+  border: 0;
+  outline: 0;
+}
+.util button {
+  border: 0;
+  outline: 0;
+  height: 30px;
+  cursor: pointer;
+}
+.util button i {
+  background-color: #eee;
+  height: 30px;
+}
+.util li a {
+  display: block;
+  margin-left: 20px;
+  transition: all 0.3s;
+}
+.util li a:hover {
+  color: crimson;
+}
+
+.header-bottom-left {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 50%;
+  height: 100%;
+}
+
+.header-bottom-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+main {
+  width: 100%;
+}
+main .hero {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .hero-txt {
+  position: absolute;
+  left: 10%;
+}
+main .hero h1 {
+  display: block;
+  font-size: 3vw;
+  color: #fff;
+}
+main .hero p {
+  display: block;
+  font-size: 1vw;
+  color: #fff;
+}
+main .hero a {
+  display: block;
+  width: 100px;
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  transition: all 0.3s;
+}
+main .hero a:hover {
+  background: rgb(255, 255, 255);
+}
+main .section {
+  width: 100%;
+  padding: 5% 5%;
+}
+main .section h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+main .section p {
+  font-size: 1vw;
+}
+main .section .swiper {
+  width: 100%;
+}
+main .section .card {
+  margin: 30px 10px;
+  cursor: pointer;
+  padding-bottom: 5%;
+}
+main .section .card:hover {
+  border: 1px solid #ccc;
+}
+main .section .card img {
+  width: 100%;
+  margin: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .section .card span {
+  color: #888;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+footer .footer-top {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #ccc;
+  padding: 30px 5%;
+}
+footer .footer-top .footer-content {
+  display: flex;
+  justify-content: space-around;
+}
+footer .footer-top .footer-content li a {
+  display: block;
+  padding: 5px 0px;
+}
+footer .footer-top address p {
+  display: block;
+  margin-top: 50px;
+}
+footer .footer-bottom {
+  background-color: #333;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .footer-bottom li {
+  display: inline-block;
+}
+footer .footer-bottom li a {
+  display: block;
+  padding: 5px 10px;
+  border-right: 1px solid #ddd;
+  color: #ddd;
+}
+footer .footer-bottom small {
+  font-size: 14px;
+  align-self: flex-start;
+  margin-left: 10%;
+  color: #ddd;
+}
+
+.hidden {
+  display: none;
+}
+
+.sub {
+  width: 100%;
+  z-index: 100;
+  position: absolute;
+}
+.sub .sub-category {
+  padding: 1% 5%;
+  width: 100%;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: repeat(8, 12%);
+  gap: 0.5%;
+  background-color: #fff;
+}
+.sub .sub-category ul li {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 2;
+}
+.sub .sub-category > li {
+  display: inline-block;
+  text-align: left;
+  font-size: 1vw;
+}
+.sub .sub-category > li:nth-child(1) {
+  grid-column: 3/4;
+  border-right: 1px solid #ddd;
+}
+/*# sourceMappingURL=layout.css.map */
