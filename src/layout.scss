@@ -377,7 +377,8 @@ footer{
   width: 100%;
   z-index: 100;
   position: absolute;
-
+  opacity: 0;
+  transition: opacity 0.3s;
 
   .sub-category {
     padding: 1% 5%;
@@ -408,10 +409,17 @@ footer{
   }
 }
 
+.fadein {
+  opacity: 1;
+  // transition: opacity 0.6s;
+}
+
 .detail {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(6, 16.6666667%);
+  opacity: 0;
+  transition: opacity 0.6s;
 
 
   article {
@@ -471,6 +479,11 @@ footer{
       object-fit: contain;
     }
   }
+}
+
+.fadein {
+  opacity: 1;
+  // transition: opacity 0.6s;
 }
 
 .dk-wrap {

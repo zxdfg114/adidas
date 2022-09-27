@@ -2,7 +2,7 @@
 import Header from "./component/Header";
 import Footer from "./component/Footer";
 import Hero from "./component/Hero";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Section1 from "./component/Section1";
 import Section2 from "./component/Section2";
 import Section4 from "./component/Section4";
@@ -24,8 +24,15 @@ import SubWomen from "./component/SubWomen";
 import SubKid from "./component/SubKid";
 import DwgKia from "./routes/DK";
 import Login from "./routes/LogIn";
+import axios from "axios";
+import AxiosGet from "./component/AxiosGet.jsx";
+import Notice from "./component/Notice";
 
 function App() {
+  let [notice, setNotice] = useState(false);
+  let [axiosData, setAxiosData] = useState(null);
+  let [axiosCount, setAxiosCount] = useState(0);
+  let [axiosGet, setAxiosGet] = useState(false);
   let [subMenu, setSubMenu] = useState(null);
   let subs = [
     <SubMen subMenu={subMenu} setSubMenu={setSubMenu}></SubMen>,
@@ -75,7 +82,40 @@ function App() {
         />
         <Route path="/Login" element={<Login />} />
       </Routes>
-
+      <button
+        onClick={() => {
+          console.log(axiosCount);
+          if (axiosCount === 0) {
+            axios
+              .get("https://codingapple1.github.io/shop/data2.json")
+              .then((response) => {
+                setAxiosCount(axiosCount + 1);
+                setAxiosGet(true);
+                setAxiosData(response.data);
+              })
+              .catch((err) => {
+                console.log(err);
+              });
+          } else if (axiosCount === 1) {
+            axios
+              .get("https://codingapple1.github.io/shop/data3.json")
+              .then((response) => {
+                setAxiosCount(axiosCount + 1);
+                setAxiosGet(true);
+                setAxiosData(response.data);
+              })
+              .catch((err) => {
+                console.log(err);
+              });
+          } else {
+            setAxiosGet(false);
+          }
+        }}
+      >
+        AJAX하는 버튼
+      </button>
+      {axiosGet ? <AxiosGet data={axiosData} /> : null}
+      {axiosGet === false && axiosCount >= 2 ? <Notice /> : null}
       <Footer></Footer>
     </div>
   );

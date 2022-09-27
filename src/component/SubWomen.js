@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function SubWomen(props) {
+  let [fade, setFade] = useState("");
+  useEffect(() => {
+    setFade("fadein");
+  }, [fade]);
   return (
     <div
-      className="sub sub-men"
+      className={`sub sub-men ${fade}`}
       onMouseLeave={() => {
         props.setSubMenu(null);
       }}
