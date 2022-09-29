@@ -10,8 +10,8 @@ li {
 }
 
 a {
-  color: #111;
-  text-decoration: none;
+  color: #111 ;
+  text-decoration: none!important;
 }
 
 body {
@@ -58,6 +58,8 @@ header.hidden {
       width: 100%;
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0;
     }
   }
 
@@ -71,6 +73,7 @@ header.hidden {
     color: #fff;
     margin: 0 10px;
     letter-spacing: 1px;
+    white-space: nowrap;
   }
 
 .header-bottom {
@@ -118,6 +121,10 @@ header.hidden {
         }
       }
     }
+}
+
+nav ul {  
+  padding-left: 0;
 }
 
 .quick li {

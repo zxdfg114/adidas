@@ -8,7 +8,7 @@ import Section2 from "./component/Section2";
 import Section4 from "./component/Section4";
 import SignUp from "./component/SignUp";
 import Section3 from "./component/Section3";
-import "./layout.min.css";
+
 import {
   Routes,
   Route,
@@ -26,7 +26,12 @@ import DwgKia from "./routes/DK";
 import Login from "./routes/LogIn";
 import axios from "axios";
 import AxiosGet from "./component/AxiosGet.jsx";
+import Cart from "./routes/Cart";
 import Notice from "./component/Notice";
+import { createContext } from "react";
+import "./layout.min.css";
+
+let Context1 = createContext();
 
 function App() {
   let [notice, setNotice] = useState(false);
@@ -34,6 +39,7 @@ function App() {
   let [axiosCount, setAxiosCount] = useState(0);
   let [axiosGet, setAxiosGet] = useState(false);
   let [subMenu, setSubMenu] = useState(null);
+  let [재고] = useState(10, 11, 12);
   let subs = [
     <SubMen subMenu={subMenu} setSubMenu={setSubMenu}></SubMen>,
     <SubWomen subMenu={subMenu} setSubMenu={setSubMenu}></SubWomen>,
@@ -50,11 +56,13 @@ function App() {
         <Route
           path={"/detail/:id"}
           element={
-            <Detail
-              product={product}
-              product2={product2}
-              DKProduct={DKProduct}
-            ></Detail>
+            <Context1.Provider value={{ 재고 }}>
+              <Detail
+                product={product}
+                product2={product2}
+                DKProduct={DKProduct}
+              ></Detail>
+            </Context1.Provider>
           }
         />
         <Route
@@ -81,6 +89,7 @@ function App() {
           }
         />
         <Route path="/Login" element={<Login />} />
+        <Route path="/cart" element={<Cart />}></Route>
       </Routes>
       <button
         onClick={() => {

@@ -87,7 +87,7 @@ export default function Header(props) {
               </Link>
             </li>
             <li>
-              <Link to={"/Login"}>
+              <Link to={"/Cart"}>
                 <i className="fa fa-shopping-basket fa-2x"></i>
               </Link>
             </li>
