@@ -9,6 +9,21 @@ export default function Section2(props) {
   let navigate = useNavigate();
   let [product2, setProduct2] = useState(props.product2);
   let { id } = useParams();
+  let [ww, setWw] = useState(window.innerWidth);
+
+  window.addEventListener("resize", () => {
+    setWw(window.innerWidth);
+  });
+
+  const slideView = () => {
+    if (ww > 1080) {
+      return 6;
+    } else if (ww > 780) {
+      return 4;
+    } else {
+      return 2;
+    }
+  };
   return (
     <section className="section section2">
       <article>
@@ -22,7 +37,7 @@ export default function Section2(props) {
         navigation
         pagination={{ clickable: true }}
         spaceBetween={10}
-        slidesPerView={6}
+        slidesPerView={slideView()}
       >
         {product2.map(function (data, i) {
           return (

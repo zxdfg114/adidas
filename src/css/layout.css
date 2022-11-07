@@ -1,34 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  color: #111;
-  text-decoration: none !important;
-}
-a:hover {
-  color: dodgerblue;
-}
-
-body {
-  width: 100%;
-  height: 100%;
-}
-
-body * {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 14px;
-  font-family: "Noto Sans KR", sans-serif;
-}
-
 header {
   width: 100%;
   height: 120px;
@@ -46,6 +15,7 @@ header.hidden {
 }
 
 .header-top {
+  width: 100%;
   height: 25%;
   background-color: #111;
   display: flex;
@@ -63,6 +33,8 @@ header.hidden {
 
 .header-top li {
   display: inline-block;
+  width: 33.3333333333%;
+  text-align: center;
 }
 
 .header-top li a {
@@ -117,8 +89,18 @@ header.hidden {
   font-weight: 300;
 }
 
+nav {
+  position: absolute;
+  width: 50%;
+}
+
 nav ul {
+  width: 100%;
   padding-left: 0;
+}
+nav ul li {
+  width: 16.6666666667%;
+  text-align: center;
 }
 
 .quick li {
@@ -176,17 +158,21 @@ nav ul {
   flex-direction: row;
   align-items: flex-end;
   justify-content: space-between;
-  width: 50%;
   height: 100%;
 }
 
 .header-bottom-right {
-  width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-end;
+}
+.header-bottom-right .quick li a {
+  color: #111;
+}
+.header-bottom-right .util li a i {
+  color: #111;
 }
 
 .hero {
@@ -252,6 +238,9 @@ main .section .card:hover {
 }
 main .section .card img {
   width: 100%;
+  height: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 0;
 }
 main .section .card span {
@@ -293,7 +282,7 @@ main .section .card span {
 
 footer {
   position: relative;
-  bottom: 0;
+  top: 100%;
   width: 100%;
 }
 footer .footer-top {
@@ -362,6 +351,7 @@ footer .footer-bottom small {
 }
 .sub .sub-category > li {
   display: inline-block;
+  color: #111;
   text-align: left;
   font-size: 1vw;
 }
@@ -372,6 +362,7 @@ footer .footer-bottom small {
 
 .detail {
   width: 100%;
+  margin: 5% 0;
   display: grid;
   grid-template-columns: repeat(6, 16.6666667%);
   opacity: 0;
@@ -420,13 +411,47 @@ footer .footer-bottom small {
   color: #fff;
 }
 .detail figure {
+  margin: 0;
   grid-column: 2/span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .detail figure img {
+  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
+@media screen and (max-width: 1080px) {
+  .detail {
+    display: flex;
+    flex-direction: column;
+  }
+  .detail figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .detail figure img {
+    width: 70%;
+  }
+  .detail article {
+    padding: 5%;
+  }
+  .detail article ul {
+    padding: 0;
+  }
+  .detail article .product-info {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .detail article .product-info div {
+    margin: 5% 0;
+  }
+}
 .dk-wrap {
   width: 100%;
   display: flex;
@@ -543,5 +568,42 @@ footer .footer-bottom small {
 
 .fadein {
   opacity: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+body a {
+  color: #111;
+  text-decoration: none !important;
+}
+body a:hover {
+  color: dodgerblue;
+}
+
+ul {
+  margin-bottom: 0;
+  padding: none;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 110vh;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+  font-family: "Noto Sans KR", sans-serif;
 }
 /*# sourceMappingURL=layout.css.map */

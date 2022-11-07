@@ -34,7 +34,7 @@ export default function DwgKia(props) {
       <div className="dk-container">
         {props.DKProduct?.map(function (data, i) {
           return (
-            <div className="card">
+            <div className="card" key={i}>
               <figure
                 onClick={() => {
                   let id = props.DKProduct[i].id;

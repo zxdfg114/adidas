@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import "swiper/css";
@@ -8,6 +8,22 @@ import { Routes, Route, Link, useParams, useNavigate } from "react-router-dom";
 export default function Section1(props) {
   let [product, setProduct] = useState(props.product);
   let navigate = useNavigate();
+  let [ww, setWw] = useState(window.innerWidth);
+
+  window.addEventListener("resize", () => {
+    setWw(window.innerWidth);
+  });
+
+  const slideView = () => {
+    if (ww > 1080) {
+      return 6;
+    } else if (ww > 780) {
+      return 4;
+    } else {
+      return 2;
+    }
+  };
+
   return (
     <section className="section section1">
       <article>
@@ -19,7 +35,7 @@ export default function Section1(props) {
         navigation
         pagination={{ clickable: true }}
         spaceBetween={10}
-        slidesPerView={6}
+        slidesPerView={slideView()}
       >
         {props.product.map(function (data, i) {
           return (

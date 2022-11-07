@@ -45,6 +45,10 @@ function App() {
     <SubWomen subMenu={subMenu} setSubMenu={setSubMenu}></SubWomen>,
     <SubKid subMenu={subMenu} setSubMenu={setSubMenu}></SubKid>,
   ];
+  let [ww, setWw] = useState(window.innerWidth);
+  window.addEventListener("resize", () => {
+    setWw(window.innerWidth);
+  });
   let navigate = useNavigate();
   return (
     <div className="App">
@@ -71,7 +75,7 @@ function App() {
               <Hero></Hero>
               <Section1 product={product}></Section1>
               <Section2 product2={product2}></Section2>
-              <Section3 product3={product3}></Section3>
+              <Section3 product3={product3} ww={ww}></Section3>
               <Section4></Section4>
               <SignUp></SignUp>
             </main>

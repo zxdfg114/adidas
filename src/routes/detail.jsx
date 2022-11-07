@@ -10,7 +10,6 @@ import { getValue } from "@testing-library/user-event/dist/utils";
 export default function Detail(props) {
   let disPatch = useDispatch();
   let [fade, setFade] = useState("");
-  let [alert, setAlert] = useState(true);
   let [count, setCount] = useState(0);
   let { id } = useParams();
   let combined = props.product.concat(props.product2).concat(props.DKProduct);
@@ -39,9 +38,11 @@ export default function Detail(props) {
                 type="number"
                 valid
                 name="count"
+                defaultValue={1}
                 onChange={(e) => {
                   setCount(e.target.value);
                 }}
+                style={{ marginBottom: "1rem" }}
               />
             </div>
             <Link

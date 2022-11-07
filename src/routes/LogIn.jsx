@@ -6,9 +6,9 @@ export default function Login() {
     <div className="wrap">
       <form>
         <h1>로그인</h1>
-        <label htmlfor="id">ID</label>
+        <label htmlFor="id">ID</label>
         <input type="text" name="id" placeholder="아이디" required />
-        <label htmlfor="password">PW</label>
+        <label htmlFor="password">PW</label>
         <input
           type="password"
           name="password"

@@ -7,13 +7,10 @@ export default function SubKid(props) {
     setTimeout(() => {
       setFade("fadein");
     }, 100);
-    return () => {
-      setFade("");
-    };
   }, [fade]);
   return (
     <div
-      className={`sub sub-men ${fade}`}
+      className={`sub sub-kid ${fade}`}
       onMouseLeave={() => {
         props.setSubMenu(null);
       }}

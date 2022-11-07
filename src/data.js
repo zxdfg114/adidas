@@ -211,41 +211,41 @@ const product3 = [
   },
   {
     id: 302,
-    name: "DWG KIA LEGEND PACK",
+    name: "BLUE VERSION",
     description:
-      "DARE TO BE LEGENDS 리그의 전설은 우리가 쓴다. 담원기아와 함께한 신개념 e스포츠웨어",
+      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum non placeat tempora dolorem eligendi voluptatibus alias officiis a modi facilis illum distinctio culpa quaerat mollitia, corporis tempore quos eaque veniam.",
     src: "../image/s302.jpg",
     price: 79000,
   },
   {
     id: 303,
-    name: "DWG KIA LEGEND PACK",
+    name: "LOREM IPSUM",
     description:
-      "DARE TO BE LEGENDS 리그의 전설은 우리가 쓴다. 담원기아와 함께한 신개념 e스포츠웨어",
+      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum non placeat tempora dolorem eligendi voluptatibus alias officiis a modi facilis illum distinctio culpa quaerat mollitia, corporis tempore quos eaque veniam.",
     src: "../image/s303.gif",
     price: 79000,
   },
   {
     id: 304,
-    name: "DWG KIA LEGEND PACK",
+    name: "LOREM",
     description:
-      "DARE TO BE LEGENDS 리그의 전설은 우리가 쓴다. 담원기아와 함께한 신개념 e스포츠웨어",
+      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum non placeat tempora dolorem eligendi voluptatibus alias officiis a modi facilis illum distinctio culpa quaerat mollitia, corporis tempore quos eaque veniam.",
     src: "../image/s304.jpg",
     price: 79000,
   },
   {
     id: 305,
-    name: "DWG KIA LEGEND PACK",
+    name: "LOREM IPSUM",
     description:
-      "DARE TO BE LEGENDS 리그의 전설은 우리가 쓴다. 담원기아와 함께한 신개념 e스포츠웨어",
+      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum non placeat tempora dolorem eligendi voluptatibus",
     src: "../image/s305.jpg",
     price: 79000,
   },
   {
     id: 306,
-    name: "DWG KIA LEGEND PACK",
+    name: "LOREM",
     description:
-      "DARE TO BE LEGENDS 리그의 전설은 우리가 쓴다. 담원기아와 함께한 신개념 e스포츠웨어",
+      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum non placeat tempora dolorem eligendi voluptatibus alias officiis a modi facilis illum distinctio culpa quaerat mollitia, corporis tempore quos eaque veniam.",
     src: "../image/s306.jpg",
     price: 79000,
   },

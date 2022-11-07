@@ -6,8 +6,17 @@ import "swiper/css";
 import { product3 } from "../data";
 import { useNavigate } from "react-router-dom";
 
-export default function Section3() {
+export default function Section3(props) {
   let navigate = useNavigate();
+  const slideView = () => {
+    if (props.ww > 1080) {
+      return 6;
+    } else if (props.ww > 780) {
+      return 4;
+    } else {
+      return 2;
+    }
+  };
   return (
     <section className="section section3">
       <article>
@@ -21,7 +30,7 @@ export default function Section3() {
         navigation
         pagination={{ clickable: true }}
         spaceBetween={10}
-        slidesPerView={4}
+        slidesPerView={slideView()}
       >
         {product3.map(function (data, i) {
           return (

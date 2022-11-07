@@ -1,5 +1,6 @@
 .detail {
   width: 100%;
+  margin: 5% 0;
   display: grid;
   grid-template-columns: repeat(6, 16.6666667%);
   opacity: 0;
@@ -55,10 +56,50 @@
   }
 
   figure {
+    margin: 0;
     grid-column: 2 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     img {
+      width: 100%;
       object-fit: contain;
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .detail {
+    display: flex;
+    flex-direction: column;
+
+    figure {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 70%;
+      }
+    }
+
+    article {
+      padding: 5%;
+
+      ul {
+        padding: 0;
+      }
+
+      .product-info {
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        div {
+          margin: 5% 0;
+        }
+      }
     }
   }
 }

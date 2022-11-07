@@ -5,6 +5,8 @@ import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 export default function Header(props) {
   const nav = ["MEN", "WOMEN", "KID", "SPORTS", "BRANDS", "SALE"];
   let navigate = useNavigate();
+  
+
   return (
     <header>
       <div className="header-top">
@@ -30,24 +32,23 @@ export default function Header(props) {
               <img src="../image/LOGO.svg" alt="로고" />
             </Link>
           </figure>
-          <nav>
-            <ul>
-              {nav.map(function (data, i) {
-                return (
-                  <li
-                    key={`unique${i}`}
-                    onMouseOver={() => {
-                      props.setSubMenu(i);
-                    }}
-                  >
-                    <Link to={"/"}>{nav[i]}</Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
         </div>
-
+        <nav>
+          <ul>
+            {nav.map(function (data, i) {
+              return (
+                <li
+                  key={`unique${i}`}
+                  onMouseOver={() => {
+                    props.setSubMenu(i);
+                  }}
+                >
+                  <Link to={"/"}>{nav[i]}</Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
         <div className="header-bottom-right">
           <ul className="quick">
             <li>
