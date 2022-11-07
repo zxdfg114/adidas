@@ -1,7 +1,7 @@
 import React from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { Table } from "reactstrap"
-import { changeName, changeCount } from "../store"
+import { changeName, changeCount } from "../store/store"
 
 export default function Cart() {
 

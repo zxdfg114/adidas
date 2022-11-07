@@ -1,0 +1,60 @@
+.wrap {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  form {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-size: 16px;
+      font-weight: 100;
+    }
+
+    input {
+      height: 30px;
+      padding: 10px 20px;
+      margin-bottom: 10px;
+      border: 1px solid skyblue;
+      outline: 0;
+
+      &:focus {
+        border: 2px solid skyblue;
+      }
+    }
+
+    button {
+      margin-top: 20px;
+      height: 30px;
+      width: 20%;
+      font-size: 16px;
+      text-transform: uppercase;
+      color: white;
+      background-color: dodgerblue;
+      opacity: 0.5;
+      border: 1px solid dodgerblue;
+      transition: all 0.2s;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.user {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+
+  a:hover {
+    text-decoration: underline;
+  }
+}

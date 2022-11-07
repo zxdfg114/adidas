@@ -1,0 +1,173 @@
+header {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ddd;
+  transition: all 2s ease-in-out;
+  background-color: #fff;
+  z-index: 1000;
+  opacity: 1;
+}
+
+header.hidden {
+  opacity: 0;
+}
+
+.header-top {
+  height: 25%;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10%;
+
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+  }
+}
+
+.header-top li {
+  display: inline-block;
+}
+
+.header-top li a {
+  font-size: 12px;
+  display: block;
+  color: #fff;
+  margin: 0 10px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.header-bottom {
+  padding: 0 5%;
+  height: 75%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  #logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  nav {
+    position: relative;
+    bottom: 0;
+    margin-right: 0%;
+    li {
+      display: inline-block;
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #000;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+
+      &:nth-child(1) a,
+      &:nth-child(2) a,
+      &:nth-child(3) a {
+        font-weight: bold;
+      }
+
+      a {
+        display: block;
+        color: #111;
+        padding: 10px 5px;
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+nav ul {
+  padding-left: 0;
+}
+
+.quick li {
+  display: inline-block;
+
+  a {
+    display: block;
+    font-weight: 300;
+    padding: 5px 10px;
+  }
+}
+
+.util {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  form {
+    width: 30%;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  input {
+    padding: 2px;
+    padding-left: 20%;
+    width: 10vw;
+    height: 30px;
+    border: 0;
+    background-color: #eee;
+
+    &:focus {
+      border: 0;
+      outline: 0;
+    }
+  }
+
+  button {
+    border: 0;
+    outline: 0;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  button i {
+    background-color: #eee;
+    height: 30px;
+  }
+
+  li a {
+    display: block;
+    margin-left: 20px;
+    transition: all 0.3s;
+
+    &:hover {
+      color: crimson;
+    }
+  }
+}
+
+.header-bottom-left {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 50%;
+  height: 100%;
+}
+
+.header-bottom-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+}

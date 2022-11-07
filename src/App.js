@@ -1,13 +1,13 @@
 // eslint-disable-next-line
-import Header from "./component/Header";
-import Footer from "./component/Footer";
-import Hero from "./component/Hero";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Hero from "./components/Hero";
 import { useEffect, useState } from "react";
-import Section1 from "./component/Section1";
-import Section2 from "./component/Section2";
-import Section4 from "./component/Section4";
-import SignUp from "./component/SignUp";
-import Section3 from "./component/Section3";
+import Section1 from "./components/Section1";
+import Section2 from "./components/Section2";
+import Section4 from "./components/Section4";
+import SignUp from "./components/SignUp";
+import Section3 from "./components/Section3";
 
 import {
   Routes,
@@ -19,17 +19,17 @@ import {
 } from "react-router-dom";
 import { DKProduct, product, product2, product3 } from "./data";
 import Detail from "./routes/detail";
-import SubMen from "./component/SubMen";
-import SubWomen from "./component/SubWomen";
-import SubKid from "./component/SubKid";
+import SubMen from "./components/SubMen";
+import SubWomen from "./components/SubWomen";
+import SubKid from "./components/SubKid";
 import DwgKia from "./routes/DK";
 import Login from "./routes/LogIn";
 import axios from "axios";
-import AxiosGet from "./component/AxiosGet.jsx";
+import AxiosGet from "./components/AxiosGet.jsx";
 import Cart from "./routes/Cart";
-import Notice from "./component/Notice";
+import Notice from "./components/Notice";
 import { createContext } from "react";
-import "./layout.min.css";
+import "./css/layout.min.css";
 
 let Context1 = createContext();
 
@@ -46,7 +46,6 @@ function App() {
     <SubKid subMenu={subMenu} setSubMenu={setSubMenu}></SubKid>,
   ];
   let navigate = useNavigate();
-  let { id } = useParams();
   return (
     <div className="App">
       <Header subMenu={subMenu} setSubMenu={setSubMenu}></Header>
@@ -91,40 +90,6 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/cart" element={<Cart />}></Route>
       </Routes>
-      <button
-        onClick={() => {
-          console.log(axiosCount);
-          if (axiosCount === 0) {
-            axios
-              .get("https://codingapple1.github.io/shop/data2.json")
-              .then((response) => {
-                setAxiosCount(axiosCount + 1);
-                setAxiosGet(true);
-                setAxiosData(response.data);
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          } else if (axiosCount === 1) {
-            axios
-              .get("https://codingapple1.github.io/shop/data3.json")
-              .then((response) => {
-                setAxiosCount(axiosCount + 1);
-                setAxiosGet(true);
-                setAxiosData(response.data);
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          } else {
-            setAxiosGet(false);
-          }
-        }}
-      >
-        AJAX하는 버튼
-      </button>
-      {axiosGet ? <AxiosGet data={axiosData} /> : null}
-      {axiosGet === false && axiosCount >= 2 ? <Notice /> : null}
       <Footer></Footer>
     </div>
   );

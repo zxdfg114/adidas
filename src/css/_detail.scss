@@ -1,0 +1,64 @@
+.detail {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 16.6666667%);
+  opacity: 0;
+  transition: opacity 0.6s;
+
+  article {
+    grid-column: 5 / span 1;
+    padding-top: 5%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+
+    .product-info {
+      height: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    h2 {
+      font-style: italic;
+      font-size: 30px;
+    }
+
+    a {
+      display: block;
+      padding: 10px 20px;
+      border: 1px solid black;
+      color: #fff;
+      background-color: #555;
+      text-align: center;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: black;
+      }
+    }
+
+    ul a {
+      text-decoration: underline;
+      background-color: #fff;
+      color: #000;
+      border: none;
+      text-align: left;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  figure {
+    grid-column: 2 / span 2;
+
+    img {
+      object-fit: contain;
+    }
+  }
+}

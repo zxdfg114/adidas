@@ -1,0 +1,57 @@
+.dk-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5%;
+
+  .main-bg {
+    display: block;
+    height: 30%;
+    margin: 10px auto;
+  }
+
+  b {
+    display: block;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  p {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 50%;
+    padding: 2.5% 10%;
+    left: 10%;
+    bottom: 20%;
+    text-align: left;
+    margin: 0 auto;
+  }
+  .player {
+    display: inline-block;
+    width: 32%;
+    margin: 0 3px;
+  }
+
+  .mt50 {
+    align-self: flex-end;
+  }
+}
+
+.dk-container {
+  padding: 5% 5%;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  figcaption {
+    font-size: 1.125vw;
+    font-weight: bold;
+
+    span {
+      font-size: 14px;
+    }
+  }
+}

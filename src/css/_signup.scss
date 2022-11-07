@@ -1,0 +1,24 @@
+.signup {
+  padding: 2% 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: skyblue;
+  color: #fff;
+
+  a {
+    display: block;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    margin: 10px 20px;
+    border-radius: 10%;
+    transition: all 0.3s;
+    color: white;
+
+    &:hover {
+      background-color: dodgerblue;
+      border: 1px solid dodgerblue;
+    }
+  }
+}
