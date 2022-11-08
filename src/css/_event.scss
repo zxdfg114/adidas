@@ -3,14 +3,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 0 5%;
 
   .main-bg {
-    display: block;
-    height: 30%;
-    margin: 10px auto;
-
-    width: 90%;
+    display: flex;
+    width: 100%;
+    margin-bottom: 50px;
   }
 
   b {
@@ -23,11 +22,11 @@
 
   p {
     background-color: rgba(255, 255, 255, 0.5);
-    width: 50%;
+    width: 80%;
     padding: 2.5% 10%;
     left: 10%;
     bottom: 20%;
-    text-align: left;
+    text-align: center;
     margin: 0 auto;
   }
 
@@ -41,14 +40,22 @@
       width: 100%;
     }
   }
+
+  article {
+    margin: 5% 0;
+  }
 }
 
 .dk-container {
   padding: 5% 5%;
-  display: flex;
+  display: grid;
   width: 100%;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  img {
+    width: 100%;
+  }
 
   figcaption {
     font-size: 1.125vw;

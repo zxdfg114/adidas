@@ -43,7 +43,6 @@ footer {
     }
     small {
       font-size: 14px;
-      margin-left: 10%;
       color: #ddd;
     }
   }
@@ -64,8 +63,12 @@ footer {
     }
     .footer-bottom {
       .notice {
-        li {
-          font-size: 10px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        li a {
+          font-size: 16px;
+          border: 0;
         }
       }
     }
@@ -86,8 +89,9 @@ footer {
       height: 200px;
       .notice {
         padding: 0;
-        li {
-          font-size: 10px;
+        li a {
+          font-size: 14px;
+          border: 0;
         }
       }
 

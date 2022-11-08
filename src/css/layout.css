@@ -74,11 +74,13 @@ header.hidden {
   content: "";
   display: block;
   width: 0;
-  height: 2px;
-  background: #000;
+  height: 4px;
+  background: dodgerblue;
+  transition: width 0.5s;
 }
 .header-bottom nav li:hover::after {
   width: 100%;
+  background-color: dodgerblue;
 }
 .header-bottom nav li:nth-child(1) a, .header-bottom nav li:nth-child(2) a, .header-bottom nav li:nth-child(3) a {
   font-weight: bold;
@@ -89,6 +91,10 @@ header.hidden {
   padding: 10px 5px;
   font-size: 16px;
   font-weight: 300;
+  transition: all 0.3s;
+}
+.header-bottom nav li a:hover {
+  color: dodgerblue;
 }
 
 nav {
@@ -217,12 +223,13 @@ header .util button {
   header .header-bottom nav {
     position: fixed;
     top: 0;
-    left: -50px;
+    left: 0px;
     width: 50%;
     height: 100vh;
     background-color: #fff;
     z-index: 100;
     box-shadow: 0 0 0 50vmax rgba(0, 0, 0, 0.5);
+    transform: translateX(0%);
   }
   header .header-bottom nav ul {
     flex-direction: column;
@@ -232,6 +239,10 @@ header .util button {
     cursor: pointer;
     width: 100%;
     height: 60px;
+    border-bottom: 1px solid #eee;
+  }
+  header .header-bottom nav ul li::after {
+    transform: translateY(15px);
   }
 }
 .hero {
@@ -399,7 +410,6 @@ footer .footer-bottom li a {
 }
 footer .footer-bottom small {
   font-size: 14px;
-  margin-left: 10%;
   color: #ddd;
 }
 
@@ -410,8 +420,14 @@ footer .footer-bottom small {
   footer .footer-top .footer-content address p {
     font-size: 14px;
   }
-  footer .footer-bottom .notice li {
-    font-size: 10px;
+  footer .footer-bottom .notice {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  footer .footer-bottom .notice li a {
+    font-size: 16px;
+    border: 0;
   }
 }
 @media screen and (max-width: 780px) {
@@ -427,8 +443,9 @@ footer .footer-bottom small {
   footer .footer-bottom .notice {
     padding: 0;
   }
-  footer .footer-bottom .notice li {
-    font-size: 10px;
+  footer .footer-bottom .notice li a {
+    font-size: 14px;
+    border: 0;
   }
   footer .footer-bottom small {
     display: flex;
@@ -566,13 +583,13 @@ footer .footer-bottom small {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 0 5%;
 }
 .dk-wrap .main-bg {
-  display: block;
-  height: 30%;
-  margin: 10px auto;
-  width: 90%;
+  display: flex;
+  width: 100%;
+  margin-bottom: 50px;
 }
 .dk-wrap b {
   display: block;
@@ -583,11 +600,11 @@ footer .footer-bottom small {
 }
 .dk-wrap p {
   background-color: rgba(255, 255, 255, 0.5);
-  width: 50%;
+  width: 80%;
   padding: 2.5% 10%;
   left: 10%;
   bottom: 20%;
-  text-align: left;
+  text-align: center;
   margin: 0 auto;
 }
 .dk-wrap #player {
@@ -599,13 +616,19 @@ footer .footer-bottom small {
 .dk-wrap #player .player {
   width: 100%;
 }
+.dk-wrap article {
+  margin: 5% 0;
+}
 
 .dk-container {
   padding: 5% 5%;
-  display: flex;
+  display: grid;
   width: 100%;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.dk-container img {
+  width: 100%;
 }
 .dk-container figcaption {
   font-size: 1.125vw;
@@ -733,5 +756,9 @@ html,
 body {
   font-size: 14px;
   font-family: "Noto Sans KR", sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 /*# sourceMappingURL=layout.css.map */

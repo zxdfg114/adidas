@@ -56,7 +56,7 @@ function App() {
       {subMenu === 0 ? subs[0] : null}
       {subMenu ? subs[subMenu] : null}
       <main>
-        <Routes>
+        <Routes basename={process.env.PUBLIC_URL}>
           <Route
             path={"/detail/:id"}
             element={

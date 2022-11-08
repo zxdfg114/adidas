@@ -13,14 +13,16 @@ export default function Header(props) {
 
   useEffect(() => {
     window.addEventListener("resize", () => {
-      setWw(window.innerWidth);
+      setTimeout(() => {
+        setWw(window.innerWidth);
+      }, 100);
       if (ww > 780) {
         setResponsiveNav(true);
       } else if (ww < 780) {
         setResponsiveNav(false);
       }
     });
-  }, [ww]);
+  }, []);
 
   return (
     <header>
@@ -60,14 +62,13 @@ export default function Header(props) {
           <nav>
             <ul>
               {ww < 780 && (
-                <li>
+                <li
+                  onClick={() => {
+                    setResponsiveNav(false);
+                  }}
+                >
                   <Link>
-                    <i
-                      className="fa fa-close fa-2x"
-                      onClick={() => {
-                        setResponsiveNav(false);
-                      }}
-                    ></i>
+                    <i className="fa fa-close fa-2x"></i>
                   </Link>
                 </li>
               )}
