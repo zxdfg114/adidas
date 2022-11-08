@@ -631,18 +631,34 @@ footer .footer-bottom small {
   width: 100%;
 }
 .dk-container figcaption {
-  font-size: 1.125vw;
+  font-size: 16px;
   font-weight: bold;
 }
 .dk-container figcaption span {
   font-size: 14px;
 }
 
+@media screen and (max-width: 1080px) {
+  .dk-wrap p {
+    width: 90%;
+    margin: 0;
+    padding: 0;
+  }
+  .dk-wrap #player {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dk-wrap .dk-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media screen and (max-width: 780px) {
   .dk-wrap p {
     width: 90%;
     margin: 0;
     padding: 0;
+  }
+  .dk-wrap .dk-container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 .wrap {

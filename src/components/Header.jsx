@@ -7,9 +7,6 @@ export default function Header(props) {
   let navigate = useNavigate();
   let [ww, setWw] = useState(window.innerWidth);
   let [responsiveNav, setResponsiveNav] = useState(true);
-  // window.addEventListener("resize", () => {
-  //   setWw(window.innerWidth);
-  // });
 
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -18,11 +15,11 @@ export default function Header(props) {
       }, 100);
       if (ww > 780) {
         setResponsiveNav(true);
-      } else if (ww < 780) {
+      } else if (ww <= 780) {
         setResponsiveNav(false);
       }
     });
-  }, []);
+  }, [ww]);
 
   return (
     <header>

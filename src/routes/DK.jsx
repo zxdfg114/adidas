@@ -16,7 +16,11 @@ export default function DwgKia(props) {
           &nbsp;편안한 면 소재와 릴랙스 핏 후디의 조합으로 게임에 완벽히 집중할
           수 있는 신개념 e스포츠웨어를 만나보세요.
         </p>
-        <img className="main-bg" src="../image/DKBG.jpg" alt="" />
+        <img
+          className="main-bg"
+          src={process.env.PUBLIC_URL + "/image/DKBG.jpg"}
+          alt=""
+        />
         <div id="player">
           <img
             className="player"
