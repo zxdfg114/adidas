@@ -50,7 +50,7 @@ export default function Section2(props) {
                     console.log(id);
                   }}
                 >
-                  <img src={props.product2[i].src} alt="" />
+                  <img src={props.product2[i].src} alt="" type="image/webp" />
                   <figcaption>
                     {props.product2[i].name}
                     <br />
