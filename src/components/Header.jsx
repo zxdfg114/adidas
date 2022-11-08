@@ -54,7 +54,10 @@ export default function Header(props) {
         <div className="header-bottom-left">
           <figure id="logo">
             <Link to={"/"}>
-              <img src="../image/LOGO.svg" alt="로고" />
+              <img
+                src={process.env.PUBLIC_URL + "/image/LOGO.svg"}
+                alt="로고"
+              />
             </Link>
           </figure>
         </div>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Hero() {
   return (
     <div className="hero">
-      <img src="image/hero.jpg" alt="" />
+      <img src={`${process.env.PUBLIC_URL}/image/hero.jpg`} alt="" />
       <div className="hero-txt">
         <h1>2022 카타르 월드컵 저지</h1>
         <p>
