@@ -17,12 +17,14 @@ export default function DwgKia(props) {
           수 있는 신개념 e스포츠웨어를 만나보세요.
         </p>
         <img className="main-bg" src="../image/DKBG.jpg" alt="" />
-        <img className="player" src="../image/DK001.jpg" alt="" />
-        <img className="player mt50" src="../image/DK002.jpg" alt="" />
-        <img className="player" src="../image/DK003.jpg" alt="" />
-        <img className="player" src="../image/DK004.jpg" alt="" />
-        <img className="player mt50" src="../image/DK005.jpg" alt="" />
-        <img className="player" src="../image/DK006.jpg" alt="" />
+        <div id="player">
+          <img className="player" src="../image/DK001.jpg" alt="" />
+          <img className="player mt50" src="../image/DK002.jpg" alt="" />
+          <img className="player" src="../image/DK003.jpg" alt="" />
+          <img className="player" src="../image/DK004.jpg" alt="" />
+          <img className="player mt50" src="../image/DK005.jpg" alt="" />
+          <img className="player" src="../image/DK006.jpg" alt="" />
+        </div>
       </div>
 
       <article>

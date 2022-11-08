@@ -8,3 +8,9 @@
     width: 30%;
   }
 }
+
+@media screen and (max-width: 1080px) {
+  .section4 {
+    display: none;
+  }
+}

@@ -133,7 +133,7 @@ function Footer() {
             <Link to={"/"}>채무지급 보증안내</Link>
           </li>
         </ul>
-        <small>&copy;유기백 2022</small>
+        <small>&copy;유기백 2022 비상업용 Portfolio</small>
       </div>
     </footer>
   );

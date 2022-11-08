@@ -43,9 +43,60 @@ footer {
     }
     small {
       font-size: 14px;
-      align-self: flex-start;
       margin-left: 10%;
       color: #ddd;
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  footer {
+    .footer-top {
+      .footer-content {
+        display: none;
+
+        address {
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .footer-bottom {
+      .notice {
+        li {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  footer {
+    .footer-top {
+      display: none;
+
+      address p {
+        display: none;
+      }
+    }
+
+    .footer-bottom {
+      height: 200px;
+      .notice {
+        padding: 0;
+        li {
+          font-size: 10px;
+        }
+      }
+
+      small {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        margin: 0;
+      }
     }
   }
 }

@@ -8,6 +8,13 @@
   &-txt {
     position: absolute;
     left: 10%;
+    padding: 5%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
   }
 
   h1 {

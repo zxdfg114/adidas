@@ -55,45 +55,47 @@ function App() {
       <Header subMenu={subMenu} setSubMenu={setSubMenu}></Header>
       {subMenu === 0 ? subs[0] : null}
       {subMenu ? subs[subMenu] : null}
-      <Routes>
-        <Route
-          path={"/detail/:id"}
-          element={
-            <Context1.Provider value={{ 재고 }}>
-              <Detail
-                product={product}
-                product2={product2}
-                DKProduct={DKProduct}
-              ></Detail>
-            </Context1.Provider>
-          }
-        />
-        <Route
-          path="/"
-          element={
-            <main>
-              <Hero></Hero>
-              <Section1 product={product}></Section1>
-              <Section2 product2={product2}></Section2>
-              <Section3 product3={product3} ww={ww}></Section3>
-              <Section4></Section4>
-              <SignUp></SignUp>
-            </main>
-          }
-        />
-        <Route path="*" element={<h1>준비 중 입니다</h1>} />
-        <Route
-          path="/DwgKia"
-          element={
-            <>
-              <DwgKia DKProduct={DKProduct} />
-              <SignUp />
-            </>
-          }
-        />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/cart" element={<Cart />}></Route>
-      </Routes>
+      <main>
+        <Routes>
+          <Route
+            path={"/detail/:id"}
+            element={
+              <Context1.Provider value={{ 재고 }}>
+                <Detail
+                  product={product}
+                  product2={product2}
+                  DKProduct={DKProduct}
+                ></Detail>
+              </Context1.Provider>
+            }
+          />
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero></Hero>
+                <Section1 product={product}></Section1>
+                <Section2 product2={product2}></Section2>
+                <Section3 product3={product3} ww={ww}></Section3>
+                <Section4></Section4>
+                <SignUp></SignUp>
+              </>
+            }
+          />
+          <Route path="*" element={<h1>준비 중 입니다</h1>} />
+          <Route
+            path="/DwgKia"
+            element={
+              <>
+                <DwgKia DKProduct={DKProduct} />
+                <SignUp />
+              </>
+            }
+          />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/cart" element={<Cart />}></Route>
+        </Routes>
+      </main>
       <Footer></Footer>
     </div>
   );

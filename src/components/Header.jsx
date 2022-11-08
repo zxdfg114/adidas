@@ -5,7 +5,22 @@ import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 export default function Header(props) {
   const nav = ["MEN", "WOMEN", "KID", "SPORTS", "BRANDS", "SALE"];
   let navigate = useNavigate();
-  
+  let [ww, setWw] = useState(window.innerWidth);
+  let [responsiveNav, setResponsiveNav] = useState(true);
+  // window.addEventListener("resize", () => {
+  //   setWw(window.innerWidth);
+  // });
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setWw(window.innerWidth);
+      if (ww > 780) {
+        setResponsiveNav(true);
+      } else if (ww < 780) {
+        setResponsiveNav(false);
+      }
+    });
+  }, [ww]);
 
   return (
     <header>
@@ -26,6 +41,14 @@ export default function Header(props) {
         </ul>
       </div>
       <div className="header-bottom">
+        {ww < 780 && (
+          <i
+            className="fa fa-bars fa-2x"
+            onClick={() => {
+              setResponsiveNav(true);
+            }}
+          ></i>
+        )}
         <div className="header-bottom-left">
           <figure id="logo">
             <Link to={"/"}>
@@ -33,22 +56,42 @@ export default function Header(props) {
             </Link>
           </figure>
         </div>
-        <nav>
-          <ul>
-            {nav.map(function (data, i) {
-              return (
-                <li
-                  key={`unique${i}`}
-                  onMouseOver={() => {
-                    props.setSubMenu(i);
-                  }}
-                >
-                  <Link to={"/"}>{nav[i]}</Link>
+        {responsiveNav && (
+          <nav>
+            <ul>
+              {ww < 780 && (
+                <li>
+                  <Link>
+                    <i
+                      className="fa fa-close fa-2x"
+                      onClick={() => {
+                        setResponsiveNav(false);
+                      }}
+                    ></i>
+                  </Link>
                 </li>
-              );
-            })}
-          </ul>
-        </nav>
+              )}
+              {nav.map(function (data, i) {
+                return (
+                  <li
+                    key={`unique${i}`}
+                    onMouseOver={() => {
+                      props.setSubMenu(i);
+                    }}
+                    onClick={() => {
+                      if (ww < 780) {
+                        setResponsiveNav(false);
+                      }
+                    }}
+                  >
+                    <Link to={"/"}>{nav[i]}</Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+        )}
+
         <div className="header-bottom-right">
           <ul className="quick">
             <li>
