@@ -18,12 +18,36 @@ export default function DwgKia(props) {
         </p>
         <img className="main-bg" src="../image/DKBG.jpg" alt="" />
         <div id="player">
-          <img className="player" src="../image/DK001.jpg" alt="" />
-          <img className="player mt50" src="../image/DK002.jpg" alt="" />
-          <img className="player" src="../image/DK003.jpg" alt="" />
-          <img className="player" src="../image/DK004.jpg" alt="" />
-          <img className="player mt50" src="../image/DK005.jpg" alt="" />
-          <img className="player" src="../image/DK006.jpg" alt="" />
+          <img
+            className="player"
+            src={`${process.env.PUBLIC_URL}/image/DK001.jpg`}
+            alt=""
+          />
+          <img
+            className="player mt50"
+            src={`${process.env.PUBLIC_URL}/image/DK002.jpg`}
+            alt=""
+          />
+          <img
+            className="player"
+            src={`${process.env.PUBLIC_URL}/image/DK003.jpg`}
+            alt=""
+          />
+          <img
+            className="player"
+            src={`${process.env.PUBLIC_URL}/image/DK004.jpg`}
+            alt=""
+          />
+          <img
+            className="player mt50"
+            src={`${process.env.PUBLIC_URL}/image/DK005.jpg`}
+            alt=""
+          />
+          <img
+            className="player"
+            src={`${process.env.PUBLIC_URL}/image/DK006.jpg`}
+            alt=""
+          />
         </div>
       </div>
 
