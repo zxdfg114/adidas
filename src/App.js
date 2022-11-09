@@ -82,9 +82,20 @@ function App() {
               </>
             }
           />
-          <Route path="*" element={<h1>준비 중 입니다</h1>} />
+
           <Route
-            path="/DwgKia"
+            path="*"
+            element={
+              <>
+                {" "}
+                <div className="preparing">
+                  <h1>준비 중 입니다</h1>
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/DWG KIA LEGEND PACK"
             element={
               <>
                 <DwgKia DKProduct={DKProduct} />

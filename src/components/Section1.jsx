@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 import "swiper/css";
 import { Routes, Route, Link, useParams, useNavigate } from "react-router-dom";
 
@@ -31,9 +31,9 @@ export default function Section1(props) {
         <p>운동 루틴에 새로운 에너지를 불어넣는 트레이닝 웨어</p>
       </article>
       <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        navigation
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         pagination={{ clickable: true }}
+        autoplay={true}
         spaceBetween={10}
         slidesPerView={slideView()}
       >

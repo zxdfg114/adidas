@@ -16,6 +16,10 @@ main {
 
     .swiper {
       width: 100%;
+
+      &-button-disabled {
+        display: none;
+      }
     }
 
     .card {
@@ -23,10 +27,6 @@ main {
       cursor: pointer;
       padding-bottom: 5%;
       border: 1px solid transparent;
-
-      &:hover {
-        border: 1px solid #ccc;
-      }
 
       img {
         width: 100%;
@@ -38,6 +38,28 @@ main {
       span {
         color: #888;
       }
+    }
+  }
+}
+
+.preparing {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.special {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  figcaption {
+    font-size: 20px;
+
+    span {
+      font-size: 16px;
     }
   }
 }

@@ -10,9 +10,9 @@ export default function Section3(props) {
   let navigate = useNavigate();
   const slideView = () => {
     if (props.ww > 1080) {
-      return 6;
-    } else if (props.ww > 780) {
       return 4;
+    } else if (props.ww > 780) {
+      return 3;
     } else {
       return 2;
     }
@@ -27,7 +27,6 @@ export default function Section3(props) {
       </article>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        navigation
         pagination={{ clickable: true }}
         spaceBetween={10}
         slidesPerView={slideView()}
@@ -35,10 +34,10 @@ export default function Section3(props) {
         {product3.map(function (data, i) {
           return (
             <SwiperSlide key={i}>
-              <div className="card" key={i}>
+              <div className="card special" key={i}>
                 <figure
                   onClick={() => {
-                    navigate("/DwgKia");
+                    navigate(`/${product3[i].name}`);
                   }}
                 >
                   <img src={product3[i].src} alt="" />

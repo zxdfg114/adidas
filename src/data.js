@@ -213,39 +213,43 @@ const product3 = [
     id: 302,
     name: "BLUE VERSION",
     description:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum non placeat tempora dolorem eligendi voluptatibus alias officiis a modi facilis illum distinctio culpa quaerat mollitia, corporis tempore quos eaque veniam.",
+      "adidas Blue Version은 보다 개념적이고 고급스러운 렌즈를 통해 adidas 범위를 봅니다",
     src: process.env.PUBLIC_URL + "/image/s302.jpg",
     price: 79000,
   },
   {
     id: 303,
-    name: "LOREM IPSUM",
+    name: "HYPERTURF",
     description:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum non placeat tempora dolorem eligendi voluptatibus alias officiis a modi facilis illum distinctio culpa quaerat mollitia, corporis tempore quos eaque veniam.",
-    src: process.env.PUBLIC_URL + "/image/s303.gif",
+      "도심속의 자유로운 여정을 위해 탄생한 하이퍼터프. 오리지널스 만의 감성으로 아웃도어 스타일을 재해석하다.",
+    src:
+      process.env.PUBLIC_URL +
+      "/image/HYPERTURF-Teaser_Carousel-d_tcm215-957248.jpg",
     price: 79000,
   },
   {
     id: 304,
-    name: "LOREM",
+    name: "Y-3: Past Meets Future",
     description:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum non placeat tempora dolorem eligendi voluptatibus alias officiis a modi facilis illum distinctio culpa quaerat mollitia, corporis tempore quos eaque veniam.",
-    src: process.env.PUBLIC_URL + "/image/s304.jpg",
+      "애니멀 프린트. 절제된 컬러. 스포티한 실루엣의 조화. 2022 F/W Chapter 4 : Memories of Exotics",
+    src:
+      process.env.PUBLIC_URL +
+      "/image/A woman wearing a black 3-striped adidas Y-3_yythkg.jpg",
     price: 79000,
   },
   {
     id: 305,
-    name: "LOREM IPSUM",
+    name: "NMD V3",
     description:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum non placeat tempora dolorem eligendi voluptatibus",
+      "  갑피 제작에 사용된 고기능성 원사에 최소 50% 이상의 팔리 오션 플라스틱, 50%의 재생 폴리에스테르가 함유되어 있습니다.",
     src: process.env.PUBLIC_URL + "/image/s305.jpg",
     price: 79000,
   },
   {
     id: 306,
-    name: "LOREM",
+    name: "SUPERSTAR",
     description:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum non placeat tempora dolorem eligendi voluptatibus alias officiis a modi facilis illum distinctio culpa quaerat mollitia, corporis tempore quos eaque veniam.",
+      "  농구의 아이콘부터 일상적으로 편히 신는 운동화에 이르기까지 만인의 사랑을 받았던 아디다스 운동화를 만나보세요",
     src: process.env.PUBLIC_URL + "/image/s306.jpg",
     price: 79000,
   },
